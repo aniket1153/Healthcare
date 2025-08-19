@@ -1,7 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react"; 
 import Slider from "react-slick";
 import { FaSearch, FaList, FaUser, FaMapMarkerAlt } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";  // 👈 import navigation
+import { useNavigate } from "react-router-dom";  
 
 import img1 from "../assets/img1.jpg";
 import img2 from "../assets/img1.jpg";
@@ -21,7 +21,7 @@ const HeroSection = () => {
 
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef(null);
-  const navigate = useNavigate(); // 👈 for routing
+  const navigate = useNavigate();
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -38,29 +38,29 @@ const HeroSection = () => {
 
   return (
     <div className="bg-white py-10 flex justify-center">
-      <div className="max-w-full w-full flex justify-center gap-10">
+      <div className="max-w-full w-full flex flex-col md:flex-row justify-center gap-10 px-4">
 
         {/* Carousel */}
-        <div className="w-[55rem] ml-5">
+        <div className="w-full md:w-[55rem] md:ml-5">
           <Slider {...settings}>
             <div>
-              <img src={img1} alt="slide1" className="rounded-xl w-full h-[23rem] object-cover" />
+              <img src={img1} alt="slide1" className="rounded-xl w-full h-[15rem] md:h-[23rem] object-cover" />
             </div>
             <div>
-              <img src={img2} alt="slide2" className="rounded-xl w-full h-[23rem] object-cover" />
+              <img src={img2} alt="slide2" className="rounded-xl w-full h-[15rem] md:h-[23rem] object-cover" />
             </div>
             <div>
-              <img src={img3} alt="slide3" className="rounded-xl w-full h-[23rem] object-cover" />
+              <img src={img3} alt="slide3" className="rounded-xl w-full h-[15rem] md:h-[23rem] object-cover" />
             </div>
           </Slider>
         </div>
 
         {/* Search Card */}
-        <div className="bg-white p-6 rounded-xl shadow-lg w-full max-w-sm h-[23rem]">
+        <div className="bg-white p-6 rounded-xl shadow-lg w-full md:max-w-sm h-auto md:h-[23rem]">
           <h2 className="text-xl font-semibold mb-6 text-center">Search</h2>
           
           {/* Choose Category */}
-          <div className="w-full max-w-sm relative" ref={dropdownRef}>
+          <div className="w-full relative" ref={dropdownRef}>
             {/* Trigger */}
             <div
               onClick={() => setOpen(!open)}
@@ -76,7 +76,7 @@ const HeroSection = () => {
                 <ul className="space-y-1 text-gray-700">
                   <li
                     onClick={() => {
-                      navigate("/hospitals");  // 👈 redirect to HospitalList page
+                      navigate("/hospitals");
                       setOpen(false);
                     }}
                     className="px-3 py-2 rounded-md hover:bg-[#006E58] hover:text-white cursor-pointer"
@@ -106,7 +106,7 @@ const HeroSection = () => {
             <input
               type="text"
               placeholder="Search By Name"
-              className="w-full focus:outline-none"
+              className="w-full focus:outline-none text-sm md:text-base"
             />
           </div>
 
@@ -116,15 +116,15 @@ const HeroSection = () => {
             <input
               type="text"
               placeholder="Pincode"
-              className="w-full focus:outline-none"
+              className="w-full focus:outline-none text-sm md:text-base"
             />
           </div>
 
           {/* Search Button */}
-          <button className="w-full flex items-center justify-center bg-[#006E58] text-white rounded-full py-3 font-medium hover:bg-[#005947] transition">
+          <button className="w-full flex items-center justify-center bg-[#006E58] text-white rounded-full py-3 font-medium hover:bg-[#005947] transition text-sm md:text-base">
             Search
-            <div className="h-8 w-8 rounded-full bg-white p-2 ml-2">
-              <FaSearch className="text-black " />
+            <div className="h-7 w-7 md:h-8 md:w-8 rounded-full bg-white p-2 ml-2 flex items-center justify-center">
+              <FaSearch className="text-black text-xs md:text-sm" />
             </div>
           </button>
         </div>

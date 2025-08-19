@@ -10,6 +10,7 @@ import Header from './componets/Header'
 import Navbar from './componets/Navbar'
 import Footer from './componets/Footer'
 import HospitalDetails from './componets/HospitalDetails'
+import AuthPage from './pages/AuthPage'
 
 const App = () => {
   return (
@@ -23,6 +24,8 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/hospitals" element={<HospitalList />} />
             <Route path="/hospital-details" element={<HospitalDetails />} />
+                  <Route path="" element={<HospitalDetails />} />
+                  <Route path='/auth' element={<AuthPage/>}/>
       </Routes>
 
       {/* Common Footer */}
