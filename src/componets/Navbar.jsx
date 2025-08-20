@@ -20,9 +20,9 @@ const Navbar = () => {
       {/* Desktop Menu */}
       <div className="hidden md:flex space-x-8 text-gray-600 font-medium">
         <NavLink to="/" className="hover:text-black">Home</NavLink>
-        <NavLink to="/about" className="hover:text-black">About Us</NavLink>
-        <NavLink to="/health" className="hover:text-black">Health Guide</NavLink>
-        <NavLink to="/jobs" className="hover:text-black">Job Updates</NavLink>
+        <NavLink to="/AboutUs" className="hover:text-black">About Us</NavLink>
+        <NavLink to="/healthGuide" className="hover:text-black">Health Guide</NavLink>
+        <NavLink to="/JobUpdates" className="hover:text-black">Job Updates</NavLink>
         <NavLink to="/news" className="hover:text-black">News</NavLink>
         <NavLink to="/courses" className="hover:text-black">Course</NavLink>
         <NavLink to="/contact" className="hover:text-black">Contact Us</NavLink>
@@ -64,9 +64,9 @@ const Navbar = () => {
       {isOpen && (
         <div className="absolute top-[5rem] left-0 w-full bg-[#F5F6FF] shadow-md flex flex-col items-center py-6 space-y-6 md:hidden z-50">
           <NavLink to="/" onClick={() => setIsOpen(false)}>Home</NavLink>
-          <NavLink to="/about" onClick={() => setIsOpen(false)}>About Us</NavLink>
-          <NavLink to="/health" onClick={() => setIsOpen(false)}>Health Guide</NavLink>
-          <NavLink to="/jobs" onClick={() => setIsOpen(false)}>Job Updates</NavLink>
+          <NavLink to="/AboutUs" onClick={() => setIsOpen(false)}>About Us</NavLink>
+          <NavLink to="/healthGuide" onClick={() => setIsOpen(false)}>Health Guide</NavLink>
+          <NavLink to="/JobUpdates" onClick={() => setIsOpen(false)}>Job Updates</NavLink>
           <NavLink to="/news" onClick={() => setIsOpen(false)}>News</NavLink>
           <NavLink to="/courses" onClick={() => setIsOpen(false)}>Course</NavLink>
           <NavLink to="/contact" onClick={() => setIsOpen(false)}>Contact Us</NavLink>

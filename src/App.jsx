@@ -11,6 +11,11 @@ import Navbar from './componets/Navbar'
 import Footer from './componets/Footer'
 import HospitalDetails from './componets/HospitalDetails'
 import AuthPage from './pages/AuthPage'
+import AboutUs from './pages/AboutUs'
+import HealthGuide from './pages/HealthGuide'
+import HealthGuideDetails from './pages/HealthGuideDetails'
+import JobUpdates from './pages/JobUpdates'
+import JobApplicationForm from './icons/JobApplicationForm'
 
 const App = () => {
   return (
@@ -26,6 +31,11 @@ const App = () => {
             <Route path="/hospital-details" element={<HospitalDetails />} />
                   <Route path="" element={<HospitalDetails />} />
                   <Route path='/auth' element={<AuthPage/>}/>
+                  <Route path='/AboutUs' element={<AboutUs/>}/>
+                    <Route path='/healthGuide' element={<HealthGuide/>}/>
+                     <Route path="/health-guide/:id" element={<HealthGuideDetails />} />
+                       <Route path="/JobUpdates" element={<JobUpdates />} />
+                        <Route path="/JobApplication" element={<JobApplicationForm />} />
       </Routes>
 
       {/* Common Footer */}
