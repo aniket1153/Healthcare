@@ -29,7 +29,7 @@ const Register = () => {
 
           {/* Button */}
           <div className="pt-6">
-            <button className="flex items-center gap-2 h-12 sm:h-14 px-6 sm:px-8 bg-[#006E58] text-white rounded-full hover:bg-blue-600 transition mx-auto lg:mx-0">
+            <button className="flex items-center gap-2 h-12 sm:h-14 px-6 sm:px-8 bg-[#006E58] text-white rounded-full hover:bg-[#02483a] transition mx-auto lg:mx-0 cursor-pointer">
               <span className="font-medium">Register Now</span>
               <div className="bg-white text-black h-8 w-8 flex items-center justify-center rounded-full">
                 <FaChevronRight />

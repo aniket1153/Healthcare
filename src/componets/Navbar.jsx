@@ -23,8 +23,8 @@ const Navbar = () => {
         <NavLink to="/AboutUs" className="hover:text-black">About Us</NavLink>
         <NavLink to="/healthGuide" className="hover:text-black">Health Guide</NavLink>
         <NavLink to="/JobUpdates" className="hover:text-black">Job Updates</NavLink>
-        <NavLink to="/news" className="hover:text-black">News</NavLink>
-        <NavLink to="/courses" className="hover:text-black">Course</NavLink>
+        <NavLink to="/News" className="hover:text-black">News</NavLink>
+        <NavLink to="/Course" className="hover:text-black">Course</NavLink>
         <NavLink to="/contact" className="hover:text-black">Contact Us</NavLink>
       </div>
 
@@ -67,8 +67,8 @@ const Navbar = () => {
           <NavLink to="/AboutUs" onClick={() => setIsOpen(false)}>About Us</NavLink>
           <NavLink to="/healthGuide" onClick={() => setIsOpen(false)}>Health Guide</NavLink>
           <NavLink to="/JobUpdates" onClick={() => setIsOpen(false)}>Job Updates</NavLink>
-          <NavLink to="/news" onClick={() => setIsOpen(false)}>News</NavLink>
-          <NavLink to="/courses" onClick={() => setIsOpen(false)}>Course</NavLink>
+          <NavLink to="/News" onClick={() => setIsOpen(false)}>News</NavLink>
+          <NavLink to="/Course" onClick={() => setIsOpen(false)}>Course</NavLink>
           <NavLink to="/contact" onClick={() => setIsOpen(false)}>Contact Us</NavLink>
 
           {/* Signup/Login in mobile */}

@@ -15,7 +15,11 @@ import AboutUs from './pages/AboutUs'
 import HealthGuide from './pages/HealthGuide'
 import HealthGuideDetails from './pages/HealthGuideDetails'
 import JobUpdates from './pages/JobUpdates'
-import JobApplicationForm from './icons/JobApplicationForm'
+import JobApplicationForm from './pages/JobApplicationForm'
+import News from './pages/News'
+import NewsDetails from './pages/NewsDetails'
+import Course from './pages/Course'
+import CourseRegistrationForm from './pages/CourseRegistrationForm'
 
 const App = () => {
   return (
@@ -36,6 +40,10 @@ const App = () => {
                      <Route path="/health-guide/:id" element={<HealthGuideDetails />} />
                        <Route path="/JobUpdates" element={<JobUpdates />} />
                         <Route path="/JobApplication" element={<JobApplicationForm />} />
+                        <Route path="/News" element={<News />} />
+                         <Route path="/NewsDetails/:id" element={<NewsDetails />} />
+                         <Route path="/Course" element={<Course />} />
+                           <Route path="/CourseRegistrationForm" element={<CourseRegistrationForm/>} />
       </Routes>
 
       {/* Common Footer */}

@@ -30,7 +30,8 @@ const Hospitals = () => {
 
 <div>
      <div className="text-center">
-            <h1 className="text-4xl font-semibold pb-4">Popular Aya Centre</h1>
+            <h1 className="text-4xl font-semibold pb-4">Popular Dietician
+</h1>
             <p className="text-lg pb-8">“Compassionate Care for Every Home” – warm and reassuring.</p>
         </div>
         <ImgMarquee/>
