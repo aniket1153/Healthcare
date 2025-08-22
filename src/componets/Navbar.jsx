@@ -33,9 +33,9 @@ const Navbar = () => {
         {/* Signup */}
         <button
           onClick={() => navigate("/auth?step=signup")}
-          className="flex items-center gap-3 border border-[#006E58] p-1 rounded-full hover:bg-[#e6f2ef] transition"
+          className="flex items-center gap-3 border border-[#006E58] p-1 rounded-full hover:bg-[#e6f2ef] transition cursor-pointer"
         >
-          <span className="text-lg font-medium text-[#006E58]">Create An Account</span>
+          <span className="text-lg font-medium text-[#006E58] pl-1.5">Create An Account</span>
           <div className="flex items-center justify-center h-10 w-10 bg-[#006E58] rounded-full">
             <SingnupIcon className="text-white" />
           </div>
@@ -44,7 +44,7 @@ const Navbar = () => {
         {/* Login */}
         <button
           onClick={() => navigate("/auth?step=login")}
-          className="flex items-center gap-3 bg-[#006E58] p-1 rounded-full hover:bg-[#004d3d] transition"
+          className="flex items-center gap-3 bg-[#006E58] p-1 rounded-full hover:bg-[#004d3d] transition cursor-pointer"
         >
           <span className="text-lg font-medium text-white pl-2">Login</span>
           <div className="flex items-center justify-center h-10 w-10 bg-white rounded-full">

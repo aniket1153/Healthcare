@@ -7,8 +7,19 @@ import {
 import { FaGlobe } from "react-icons/fa";
 import { IoSearchOutline } from "react-icons/io5";
 import IconHeader from "../icons/IconHeader";
+import axios from "axios";
 
 const Header = () => {
+    const handleLocationClick = async () => {
+    try {
+      const response = await axios.get("https://ipinfo.io/json?token=YOUR_TOKEN"); 
+      
+      console.log("IP Address:", response.data.ip);
+      console.log("City:", response.data.city);
+    } catch (error) {
+      console.error("Error fetching location:", error);
+    }
+  };
   return (
     <div className="w-full bg-white">
       <div className="flex flex-wrap items-center sm:justify-between md:justify-around   py-4 px-8 gap-6">
@@ -26,7 +37,7 @@ const Header = () => {
 
           {/* Location */}
           <div className="flex items-center gap-2">
-            <div className="bg-[#006E58] h-8 w-8 flex items-center justify-center rounded-full text-white">
+            <div    onClick={handleLocationClick}  className="bg-[#006E58] h-8 w-8 flex items-center justify-center rounded-full text-white">
               <MdMyLocation size={16} />
             </div>
             <select

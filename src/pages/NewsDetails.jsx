@@ -168,7 +168,7 @@ const NewsDetails = () => {
       <div className="w-full flex flex-col items-center  sm:mt-0 md:mt-8">
         {/* Hero Image with Overlay */}
 
-        <div className="relative w-full md:w-4/5">
+        <div className="relative w-full md:w-4/5 cursor-pointer">
           <img
             src={guide.img}
             alt={guide.title}

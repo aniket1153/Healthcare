@@ -126,7 +126,7 @@ const Course = () => {
         <div className="flex justify-center">
           <img
             src={img1}
-            className="h-[15rem] sm:h-[25rem] lg:h-[30rem] w-full max-w-[85%] rounded-xl object-cover"
+            className="h-[15rem] sm:h-[25rem] lg:h-[30rem] w-full max-w-[85%] rounded-xl object-cover cursor-pointer"
             alt=""
           />
         </div>
@@ -148,7 +148,7 @@ const Course = () => {
             <div className="bg-[#F5F6FF] w-full rounded-lg p-3 shadow-sm hover:shadow-md transition">
               {/* Icon */}
                 <div className=''>
-                     <img src={job.img} className="w-[55rem] h-[15rem] rounded-lg object-cover" alt="" />
+                     <img src={job.img} className="w-[55rem] h-[15rem] rounded-lg object-cover cursor-pointer" alt="" />
                 </div>
               
 
