@@ -62,10 +62,10 @@ const CourseRegistrationForm = () => {
 
   return (
     <div>
-      <div className="flex p-10 sm:pl-3 md:ml-76">
+      <div className="flex p-10 sm:pl-3 md:ml-68">
         <Breadcrumbs />
       </div>
-      <div className="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-2xl mt-5 mb-5">
+      <div className="max-w-5xl mx-auto p-9 bg-white shadow-md rounded-2xl mt-1 mb-5">
         <h1 className="text-2xl font-semibold mb-6">Registration</h1>
 
         <form onSubmit={handleSubmit} className="space-y-6">

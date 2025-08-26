@@ -45,25 +45,25 @@ const HealthGuide = () => {
   return (
     <div className="p-6 sm:p-1">
       {/* Top Banner Image */}
-      <div className='flex p-15 pl-32'>
+      <div className='flex p-15 lg:p-15 pl-1 lg:pl-32'>
         <Breadcrumbs/>
       </div>
-      <div className="flex justify-center p-1 mt-2">
+      <div className="flex justify-center">
         <img
           src={img1}
-          className="h-[30rem] w-[85%] rounded-xl object-cover"
+        className="h-[18rem] sm:h-[25rem] lg:h-[30rem] w-full lg:max-w-[89%] rounded-xl object-cover cursor-pointer"
           alt="Health Banner"
         />
       </div>
 
       {/* Heading */}
-      <h1 className="text-3xl sm:text-4xl font-bold text-center">Health Guide</h1>
+      <h1 className="text-3xl sm:text-4xl font-bold text-center pt-2 md:pt-0 lg:pt-0">Health Guide</h1>
       <p className="text-gray-600 text-center mt-2 mb-8">
         Easy to understand tips, expert backed advice, and everyday practices for a healthier life.
       </p>
 
       {/* Grid of Guides */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 place-items-center sm:p-1 lg:p-27">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-17 place-items-center sm:p-1 lg:p-27">
         {currentGuides.map((guide) => (
           <Link to={`/health-guide/${guide.id}`} key={guide.id} className="w-full">
           <div

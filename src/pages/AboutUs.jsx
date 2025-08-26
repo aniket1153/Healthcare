@@ -9,13 +9,17 @@ import Breadcrumbs from '../componets/Breadcrumbs'
 const AboutUs = () => {
   return (
     <div>
-       <div className='flex p-15 pl-42'>
+       <div className='flex p-8 lg:p-15 pl-5 lg:pl-32'>
         <Breadcrumbs/>
       </div>
       <div className='w-full p-5'>
-        <div className=' flex justify-center '>
-            <img src={img1} className='h-[30rem] w-[80%] rounded-xl object-cover ' alt="" />
-        </div>
+     <div className="flex justify-center">
+           <img
+             src={img1}
+           className="h-[18rem] sm:h-[25rem] lg:h-[30rem] w-full lg:max-w-[89%] rounded-xl object-cover cursor-pointer"
+             alt="Health Banner"
+           />
+         </div>
 
 
 <div className='flex  flex-col gap-8 w-full pt-10 justify-center'>
@@ -155,7 +159,7 @@ const AboutUs = () => {
 
   {/* Right Section - Button */}
   <div>
-    <button className="flex items-center gap-2 h-12 sm:h-14 px-6 sm:px-8 bg-[#006E58] text-white rounded-full hover:bg-blue-600 transition">
+    <button className="flex items-center gap-2 h-12 sm:h-14 px-6 sm:px-8 bg-[#006E58] text-white rounded-full hover:bg-[#024638] transition">
       <span className="font-medium">Join now</span>
       <div className="bg-white text-black h-8 w-8 flex items-center justify-center rounded-full">
         <FaChevronRight />

@@ -98,49 +98,52 @@ const SignupForm = ({ onSignup }) => {
         </div>
 
         {/* Password + Confirm (side by side) */}
-        <div className="flex gap-2">
-          <div className="relative flex-1">
-            <input
-              name="password"
-              type={showPassword ? "text" : "password"}
-              placeholder="Password"
-              className={cls(touched.password && errors.password) + " w-full"}
-              value={form.password}
-              onChange={handleChange}
-              onBlur={handleBlur}
-            />
-            <span
-              onClick={() => setShowPassword(!showPassword)}
-              className="absolute right-3 top-3 text-gray-500 cursor-pointer"
-            >
-              {showPassword ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
-            </span>
-            {touched.password && errors.password && (
-              <p className="text-xs text-red-600 mt-1">{errors.password}</p>
-            )}
-          </div>
+        <div className="flex flex-col md:flex-row gap-2 w-full">
+  {/* Password Field */}
+  <div className="relative flex-1">
+    <input
+      name="password"
+      type={showPassword ? "text" : "password"}
+      placeholder="Password"
+      className={cls(touched.password && errors.password) + " w-full pr-10"}
+      value={form.password}
+      onChange={handleChange}
+      onBlur={handleBlur}
+    />
+    <span
+      onClick={() => setShowPassword(!showPassword)}
+      className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 cursor-pointer"
+    >
+      {showPassword ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
+    </span>
+    {touched.password && errors.password && (
+      <p className="text-xs text-red-600 mt-1">{errors.password}</p>
+    )}
+  </div>
 
-          <div className="relative flex-1">
-            <input
-              name="confirm"
-              type={showConfirmPassword ? "text" : "password"}
-              placeholder="Confirm Password"
-              className={cls(touched.confirm && errors.confirm) + " w-full"}
-              value={form.confirm}
-              onChange={handleChange}
-              onBlur={handleBlur}
-            />
-            <span
-              onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-              className="absolute right-3 top-3 text-gray-500 cursor-pointer"
-            >
-              {showConfirmPassword ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
-            </span>
-            {touched.confirm && errors.confirm && (
-              <p className="text-xs text-red-600 mt-1">{errors.confirm}</p>
-            )}
-          </div>
-        </div>
+  {/* Confirm Password Field */}
+  <div className="relative flex-1">
+    <input
+      name="confirm"
+      type={showConfirmPassword ? "text" : "password"}
+      placeholder="Confirm Password"
+      className={cls(touched.confirm && errors.confirm) + " w-full pr-10"}
+      value={form.confirm}
+      onChange={handleChange}
+      onBlur={handleBlur}
+    />
+    <span
+      onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+      className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 cursor-pointer"
+    >
+      {showConfirmPassword ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
+    </span>
+    {touched.confirm && errors.confirm && (
+      <p className="text-xs text-red-600 mt-1">{errors.confirm}</p>
+    )}
+  </div>
+</div>
+
 
         {/* Referral (Optional) */}
         <input

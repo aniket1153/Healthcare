@@ -26,9 +26,9 @@ const LoginForm = ({
           />
           <span
             onClick={() => setShowPassword(!showPassword)}
-            className="absolute right-3 top-3 text-gray-500 cursor-pointer"
+            className="absolute right-3 top-3 text-gray-500 cursor-pointer pt-1"
           >
-            {showPassword ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
+            {showPassword ? <AiOutlineEyeInvisible  /> : <AiOutlineEye />}
           </span>
         </div>
       

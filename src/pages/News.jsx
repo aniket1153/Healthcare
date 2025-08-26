@@ -45,30 +45,30 @@ const News = () => {
   return (
     <div className="p-6 sm:p-1">
       {/* Top Banner Image */}
-      <div className='flex p-15 pl-32'>
+   <div className='flex p-8 lg:p-15 pl-1 lg:pl-32'>
         <Breadcrumbs/>
       </div>
-      <div className="flex justify-center p-1 mt-2">
-        <img
-          src={img1}
-          className="h-[30rem] w-[85%] rounded-xl object-cover"
-          alt="Health Banner"
-        />
-      </div>
+    <div className="flex justify-center">
+             <img
+               src={img1}
+             className="h-[18rem] sm:h-[25rem] lg:h-[30rem] w-full lg:max-w-[85%] rounded-xl object-cover cursor-pointer"
+               alt="Health Banner"
+             />
+           </div>
 
       {/* Heading */}
-      <h1 className="text-3xl sm:text-4xl font-bold text-center">News</h1>
+      <h1 className="text-3xl sm:text-4xl font-bold text-center pt-2">News</h1>
       <p className="text-gray-600 text-center mt-2 mb-8">
        News, tips, and stories worth reading handpicked for you.
       </p>
 
       {/* Grid of Guides */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 place-items-center sm:p-1 lg:p-27">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-17 place-items-center sm:p-1 lg:p-28">
         {currentGuides.map((guide) => (
           <Link to={`/NewsDetails/${guide.id}`} key={guide.id} className="w-full">
           <div
             key={guide.id}
-            className="relative rounded-xl overflow-hidden shadow-lg cursor-pointer w-full max-w-[38rem] h-[25rem] group"
+            className="relative rounded-xl overflow-hidden shadow-lg cursor-pointer w-full max-w-[38rem] h-[25rem] group "
           >
             <img
               src={guide.img}

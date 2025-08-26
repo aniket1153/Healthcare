@@ -9,6 +9,7 @@ import img8 from "../assets/HealthImg7.jpg";
 import img9 from "../assets/HealthImg8.jpg";
 import { FaCalendarAlt } from "react-icons/fa";
 import Breadcrumbs from "../componets/Breadcrumbs";
+import { MdDescription } from "react-icons/md";
 
 const guides = [
   {
@@ -16,25 +17,23 @@ const guides = [
     img: img2,
     title: "Boosting Bone Health: Calcium & Vitamin D Explained",
     date: "29 Jul, 6:12 PM",
-    intro:
+    description:
       "Strong bones are the foundation of a healthy life. Learn how calcium and vitamin D work together to protect your bones and how to get enough of both.",
-    content: `
-**Calcium: The Bone Builder**
-- Role: Builds and maintains bones & teeth
-- Sources: Milk, yogurt, leafy greens, tofu, fortified plant milk
-- RDA: 1,000–1,200 mg/day
+    heading1:"Calcium: The Bone Builder",
+    headingPoint:"Role: Builds and maintains bones & teeth",
+    headingPoint2:"Sources: Milk, yogurt, leafy greens, tofu, fortified plant milk",
+    headingPoint3:"RDA: 1,000–1,200 mg/day",
 
-**Vitamin D: The Absorption Partner**
-- Role: Helps your body absorb calcium
-- Sources: Sunlight, fatty fish, egg yolks, fortified foods
-- RDA: 600–800 IU/day
+    subheading2:"Vitamin D: The Absorption Partner",
+    subheadingPoint:"Role: Helps your body absorb calcium",
+    subheadingPoint2:"Sources: Sunlight, fatty fish, egg yolks, fortified foods",
+    subheadingPoint3:"RDA: 600–800 IU/day",
 
-**Quick Tips:**
-- Combine calcium + vitamin D for best results
-- Spend 10–30 mins in sunlight a few times a week
-- Exercise regularly (especially weight-bearing exercises)
-- Avoid smoking and excessive alcohol
-    `,
+        lastheading2:"Vitamin D: The Absorption Partner",
+    lastheadingPoint:"Role: Helps your body absorb calcium",
+    lastheadingPoint2:"Sources: Sunlight, fatty fish, egg yolks, fortified foods",
+    lastheadingPoint3:"RDA: 600–800 IU/day",
+
   },
   { id: 2, img: img3, title: "Beginner’s Guide to Mindful Eating", date: "29 Jul, 6:12 PM", intro: "Learn how mindful eating can improve your lifestyle.", content: "Details..." },
   { id: 3, img: img4, title: "How Much Is Too Much?", date: "29 Jul, 6:12 PM", intro: "Balance is the key.", content: "Details..." },
@@ -53,18 +52,18 @@ const HealthGuideDetails = () => {
 
   return (
     <div>
-         <div className='flex p-15 pl-42'>
+         <div className='flex p-8 lg:p-15 pl-5 lg:pl-42'>
         <Breadcrumbs/>
       </div>
-    <div className="w-full flex flex-col items-center  sm:mt-0 md:mt-8">
+    <div className="w-full flex flex-col items-center   sm:mt-0 md:mt-8 p-4 md:p-0 lg:p-0 ">
       {/* Hero Image with Overlay */}
       
       <div className="relative w-full md:w-4/5">
-        <img
-          src={guide.img}
-          alt={guide.title}
-          className="w-full h-56 sm:h-72 md:h-96 object-cover rounded-lg"
-        />
+         <img
+            src={guide.img}
+            alt={guide.title}
+            className="w-[15rem] md:w-[15rem] lg:w-full h-56 md:h-72 lg:h-[30rem] object-cover rounded-lg  "
+          />
 
         {/* Gradient Overlay */}
         <div className="absolute bottom-0 left-0 w-full h-full rounded-lg bg-gradient-to-t from-black/70 via-black/30 to-transparent flex flex-col justify-end p-4 text-white">
@@ -77,17 +76,32 @@ const HealthGuideDetails = () => {
       </div>
 
       {/* Content */}
-      <div className="w-full md:w-4/5 px-4 sm:px-6 md:px-4 my-7">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold">{guide.title}</h1>
-        <p className="mt-3 text-base sm:text-lg text-gray-600">{guide.intro}</p>
-
-        <div className="mt-6 prose prose-sm sm:prose-lg max-w-none">
-          {guide.content.split("\n").map((line, i) => (
-            <p key={i} className="whitespace-pre-wrap">
-              {line}
-            </p>
-          ))}
-        </div>
+ 
+    </div>
+       <div className="flex flex-col gap-1 p-6 lg:pl-40 lg:pt-7 lg:p-5 ">
+      <div>
+        <h2 className="text-lg font-semibold text-gray-800">{guide.heading1}</h2>
+        <ul  className="list-disc list-inside text-gray-700 mt-2 space-y-1 pl-1"></ul>
+        <li className="pl-2">   {guide.headingPoint}</li>
+             <li className="pl-2">   {guide.headingPoint2}</li>
+              <li className="pl-2">   {guide.headingPoint3}</li>
+  
+      </div>
+        <div>
+        <h2 className="text-lg font-semibold text-gray-800">{guide. subheading2}</h2>
+        <ul  className="list-disc list-inside text-gray-700 mt-2 space-y-1"></ul>
+        <li className="pl-2">   {guide.subheadingPoint}</li>
+             <li className="pl-2">   {guide.subheadingPoint2}</li>
+              <li className="pl-2">   {guide.subheadingPoint3}</li>
+  
+      </div>
+       <div>
+        <h2 className="text-lg font-semibold text-gray-800">{guide. lastheading2}</h2>
+        <ul  className="list-disc list-inside text-gray-700 mt-2 space-y-1"></ul>
+        <li className="pl-2">   {guide.lastheadingPoint}</li>
+             <li className="pl-2">   {guide.lastheadingPoint2}</li>
+              <li className="pl-2">   {guide.lastheadingPoint3}</li>
+  
       </div>
     </div>
     </div>

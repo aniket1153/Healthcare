@@ -117,7 +117,7 @@ const Course = () => {
   return (
     <div>
       {/* Breadcrumbs */}
-      <div className='flex p-15 pl-42'>
+      <div className='flex p-8 lg:p-15 pl-8 lg:pl-38'>
         <Breadcrumbs/>
       </div>
 
@@ -126,7 +126,7 @@ const Course = () => {
         <div className="flex justify-center">
           <img
             src={img1}
-            className="h-[15rem] sm:h-[25rem] lg:h-[30rem] w-full max-w-[85%] rounded-xl object-cover cursor-pointer"
+            className="h-[15rem] sm:h-[25rem] lg:h-[30rem] w-full lg:max-w-[87%] rounded-xl object-cover cursor-pointer"
             alt=""
           />
         </div>
@@ -141,7 +141,7 @@ const Course = () => {
       </div>
 
       {/* Job Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 p-6 md:p-27 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-15 p-6 md:p-27 ">
         {currentJobs.map((job) => (
           <div key={job.id}>
                     

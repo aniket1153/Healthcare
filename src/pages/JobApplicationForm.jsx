@@ -64,7 +64,7 @@ const JobApplicationForm = () => {
   };
 
   return (
-    <div>   <div className='flex p-12 sm:pl-3 md:ml-76'>
+    <div>   <div className="flex p-8 lg:p-15 pl-5 lg:pl-42">
         <Breadcrumbs/>
       </div>
     <div className="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-2xl mt-11 mb-5">

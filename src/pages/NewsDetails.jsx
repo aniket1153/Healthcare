@@ -162,17 +162,17 @@ const NewsDetails = () => {
 
   return (
     <div>
-      <div className="flex p-15 pl-42">
+      <div className="flex p-8 lg:p-15 pl-5 lg:pl-42">
         <Breadcrumbs />
       </div>
-      <div className="w-full flex flex-col items-center  sm:mt-0 md:mt-8">
+      <div className="w-full flex flex-col items-center  sm:mt-0 md:mt-8 p-4 md:p-0 lg:p-0">
         {/* Hero Image with Overlay */}
 
-        <div className="relative w-full md:w-4/5 cursor-pointer">
+        <div className="relative w-full md:w-4/5 cursor-pointer ">
           <img
             src={guide.img}
             alt={guide.title}
-            className="w-full h-56 sm:h-72 md:h-96 object-cover rounded-lg"
+            className="w-full h-56 md:h-72 lg:h-[30rem] object-cover rounded-lg "
           />
 
           {/* Gradient Overlay */}

@@ -124,7 +124,7 @@ const JobUpdates = () => {
   return (
     <div>
       {/* Breadcrumbs */}
-      <div className='flex p-15 pl-42'>
+      <div className='flex p-8 lg:p-15 pl-8 lg:pl-42'>
         <Breadcrumbs/>
       </div>
 
@@ -133,7 +133,7 @@ const JobUpdates = () => {
         <div className="flex justify-center">
           <img
             src={img1}
-            className="h-[15rem] sm:h-[25rem] lg:h-[30rem] w-full max-w-[85%] rounded-xl object-cover"
+            className="h-[15rem] sm:h-[25rem] lg:h-[30rem] w-full lg:max-w-[85%] rounded-xl object-cover"
             alt=""
           />
         </div>
